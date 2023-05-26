@@ -1,0 +1,117 @@
+/*Roboto Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+:root{
+
+  /*colors*/
+  --col-dark-blue:rgba(26,32,54,1);
+  --col-white:rgba(255,255,255,1); 
+  --col-gold:rgba(237,198,57,1);
+  --col-light-grey:rgba(36,43,66,1);
+  --col-red: rgba(199,13,16,1);
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background-color: var(--col-dark-blue);
+  color: var(--col-white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.container{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*TITLE*/
+.title{
+  margin-bottom: 5rem;
+  text-shadow: 9px 3px 23px #00131b, 6px -2px 0px rgba(0,0,0,.5), -1px 5px 1px rgba(0,0,0,0.9);
+  font-size: 3rem;
+  padding: 1rem;
+  color: rgba(255,255,255,1);
+}
+
+/*----------------------------
+---------RESULT BOX-----------
+-----------------------------*/
+.result-box{
+  display: none;
+  width: 100%;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 13px;
+  outline: 10px solid rgba(14, 17, 30,0.3);
+  box-shadow: 1px 1px 44px black, inset -1px 3px 14px rgb(0 0 0);
+  border-style: dashed;
+  position: relative;
+  height: 120px;
+}
+.result-box p{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+#text-trans{
+  font-style: oblique;
+  font-size: 1rem;
+  position: absolute;
+  left:43%;
+}
+.result-box p span{
+  margin-inline: 1rem;
+  position: absolute;
+  cursor: pointer;
+  transition: .6s ease-in-out;
+}
+.result-box p span:nth-child(1){
+  left: 0;
+  z-index: 10;
+}
+.result-box p span:nth-child(3){
+  right: 0;
+  z-index: 10;
+}
+.result-box p span:hover{
+  transform: translateY(-46px) translateY(0px) ;
+  font-size: 5rem;
+  background-color: var(--col-dark-blue);
+  border-radius: 100%;
+  padding: 2.4rem;
+  box-shadow: -1px -6px 3px rgba(0,0,0,0.4);
+}
+
+/*BUTTON, GET NEW FIGHTERS*/
+#pick-btn{
+  padding: 0.75rem 2rem;
+  margin-top: 5rem;
+  font-weight: 600;
+  color: var(--col-dark-blue);
+  background-color: var(--col-white);
+  outline: 10px solid rgba(14, 17, 30,0.3);
+  box-shadow: 0px 0px 2px #000000, inset 2px 1px 27px rgb(0 0 0);
+  cursor: pointer;
+  border: none;
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media (max-width:420px){
+  #text-trans{
+    left:40%;
+  }
+  .title{
+    margin-bottom: 8rem;
+  }
+}
